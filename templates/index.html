@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>House Price Prediction for BANGALORE</title>
+</head>
+<body>
+
+    <h1>Used and New House Price Prediction</h1>
+    <div class = "register main">
+
+        <h2>Bangalore</h2>
+
+        <form action = "{{ url_for('predict') }}" method = "POST">
+
+            <label>Select The Locality :</label>
+            <br>
+            <select class = "register" name = "Location">
+                
+                <option value = "none">--- Select the Locality ---</option>
+
+                <option value = "Anekal City">Anekal City</option>
+                <option value = "Attibele">Attibele</option>
+                <option value = "Avalahalli Off Sarjapur Road">Avalahalli Off Sarjapur Road</option>
+                <option value = "Banashankari">Banashankari</option>
+                <option value = "Begur">Begur</option>
+
+                <option value = "Bellandur">Bellandur</option>
+                <option value = "Bommasandra">Bommasandra</option>
+                <option value = "Budigere Cross">Budigere Cross</option>
+                <option value = "Devanahalli">Devanahalli</option>
+                <option value = "Electronic City Phase 1">Electronic City Phase 1</option>
+                
+                <option value = "Electronic City Phase 2">Electronic City Phase 2</option>
+                <option value = "Harlur">Harlur</option>
+                <option value = "Hebbal">Hebbal</option>
+                <option value = "Horamavu">Horamavu</option>
+                <option value = "ITPL">ITPL</option>
+                
+                <option value = "JP Nagar Phase 8">JP Nagar Phase 8</option>
+                <option value = "Jakkur">Jakkur</option>
+                <option value = "Kalyan Nagar">Kalyan Nagar</option>
+                <option value = "Kanakapura Road Beyond Nice Ring Road">Kanakapura Road Beyond Nice Ring Road</option>
+                <option value = "Kannur on Thanisandra Main Road">Kannur on Thanisandra Main Road</option>
+                
+                <option value = "Kasavanahalli">Kasavanahalli</option>
+                <option value = "Konanakunte">Konanakunte</option>
+                <option value = "Krishnarajapura">Krishnarajapura</option>
+                <option value = "Kumaraswamy Layout">Kumaraswamy Layout</option>
+                <option value = "Narayanapura on Hennur Main Road">Narayanapura on Hennur Main Road</option>
+                
+                <option value = "RR Nagar">RR Nagar</option>
+                <option value = "Rajajinagar">Rajajinagar</option>
+                <option value = "Sarjapur">Sarjapur</option>
+                <option value = "Sarjapur Road Wipro To Railway Crossing">Sarjapur Road Wipro To Railway Crossing</option>
+                <option value = "Talaghattapura">Talaghattapura</option>
+                
+                <option value = "Uttarahalli">Uttarahalli</option>
+                <option value = "Uttarahalli Main Road">Uttarahalli Main Road</option>
+                <option value = "Varthur">Varthur</option>
+                <option value = "Whitefield Hope Farm Junction">Whitefield Hope Farm Junction</option>
+                <option value = "Yelahanka">Yelahanka</option>
+                
+                <option value = "Yeshwantpur">Yeshwantpur</option>
+                <option value = "sarjapura attibele road">sarjapura attibele road</option>
+
+            </select>
+            <br>
+            <br>
+
+            <label>Enter The Area (Square Feet) :</label>
+            <br>
+            <input id = "name" class="register" type="text" name="Area" placeholder="eg. 1200">
+            <br>
+            <br>
+ 
+            <label>Enter The Number Of Bedrooms :</label>
+            <br>
+            <input id = "name" class="register" type="number" name="Bedrooms" placeholder="eg. 3">
+            <br>
+            <br>
+
+            <label>Is The House For Resale ? (A used house)</label>
+            <br>
+            <select class = "register" name = "Resale">
+                
+                <option value = "none">--- Yes/No ---</option>
+
+                <option value = "Yes">Yes</option>
+                <option value = "No">No</option>
+            </select>
+            <br>
+            <br>
+
+            <label>Is Lift Available ? </label>
+            <br>
+            <select class = "register" name = "LiftAvailable">
+                
+                <option value = "none">--- Yes/No ---</option>
+
+                <option value = "Yes">Yes</option>
+                <option value = "No">No</option>
+            </select>
+            <br>
+            <br>
+
+
+            <label>Is Hospital Available Nearby ? </label>
+            <br>
+            <select class = "register" name = "Hospital">
+                
+                <option value = "none">--- Yes/No ---</option>
+
+                <option value = "Yes">Yes</option>
+                <option value = "No">No</option>
+            </select>
+            <br>
+            <br>
+
+            <label>Is Car Parking Facility Available ? </label>
+            <br>
+            <select class = "register" name = "CarParking">
+                
+                <option value = "none">--- Yes/No ---</option>
+
+                <option value = "Yes">Yes</option>
+                <option value = "No">No</option>
+            </select>
+            <br>
+            <br>
+
+            <label>Enter The Year :</label>
+            <br>
+            <input id = "name" class="register" type="number" name="Year" placeholder="eg. 2022">
+            <br>
+            <br>
+
+            <input type="submit" name = "submit" id = "submit" value = "Predict">
+
+        </form>
+    </div>
+</body>
+</html>

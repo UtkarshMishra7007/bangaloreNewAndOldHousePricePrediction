@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>House Price Prediction for BANGALORE</title>
+</head>
+<body>
+
+    <h1>Used and New House Price Prediction</h1>
+    <div class = "register main">
+
+        <h2>Bangalore</h2>
+
+        <div>
+            <h3> Predicted Price is: Rs. {{ output }} Lakhs</h3>
+        </div>
+    </div>
+</body>
+</html>
